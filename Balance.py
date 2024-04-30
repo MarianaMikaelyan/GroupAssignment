@@ -1,5 +1,6 @@
 from database import *
 
+
 def add_funds(account_number, amount, accounts):
     if account_number in accounts:
         if isinstance(amount, (int, float)) and amount > 0:
@@ -12,3 +13,6 @@ def add_funds(account_number, amount, accounts):
         print("Invalid account number. Please enter a valid account number.")
     return False
 
+
+if __name__ == "__main__":
+    add_funds()
