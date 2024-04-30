@@ -1,6 +1,7 @@
 from database import *
 
 
+
 def add_funds(account_number, amount, accounts):
     if account_number in accounts:
         if isinstance(amount, (int, float)) and amount > 0:
