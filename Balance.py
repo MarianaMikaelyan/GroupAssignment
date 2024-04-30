@@ -1,3 +1,14 @@
-#ბალანსი:
+from database import *
 
-#მომხმარებელს შეუძლიათ ფულის შეტანა თავიაანთ ანგარიშზე, ანგარიშის ნომრის მითითებით
+def add_funds(account_number, amount, accounts):
+    if account_number in accounts:
+        if isinstance(amount, (int, float)) and amount > 0:
+            accounts[account_number]['Balance'] += amount
+            print(f"Balance was filled with {amount} GEL. New balance: {accounts[account_number]['Balance']} GEL")
+            return True
+        else:
+            print("Invalid amount entered. Please enter a positive number.")
+    else:
+        print("Invalid account number. Please enter a valid account number.")
+    return False
+
