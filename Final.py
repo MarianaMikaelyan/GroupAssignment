@@ -1,12 +1,12 @@
 #საბოლოო
 
 from database import database
-from createaccount import register_user
-from balance import balance1
+from CreateAccount import register_user
+from Balance import balance1
 from MoneyTransfer import transaction
-from accountdetails import users_details
+from AccountDetails import users_details
 from loancalculator import balance
-from accounthistory import history_all
+from AccountHistory import history_all
 
 def final():
     while True:
