@@ -26,6 +26,5 @@ def register_user():
         print("Initial balance cannot exceed 100 GEL.")
         balance = 0
 
-
 if __name__ == "__main__":
     register_user()
