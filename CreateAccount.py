@@ -1,8 +1,7 @@
 import random
 import string
 
-
-from database import *
+database = {}
 
 
 def validate_account_number():
@@ -25,6 +24,7 @@ def register_user():
     else:
         print("Initial balance cannot exceed 100 GEL.")
         balance = 0
+
 
 if __name__ == "__main__":
     register_user()
