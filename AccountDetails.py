@@ -1,7 +1,6 @@
 
 from CreateAccount import database
 
-
 def users_details(account_number, accounts):
     if account_number in accounts:
         user_details = accounts[account_number]
