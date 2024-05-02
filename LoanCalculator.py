@@ -5,12 +5,11 @@ def add_funds(account_number, loan_amount, loan_interest_rate, total_payable_amo
         if decision == 1:
             accounts[account_number]['Balance'] += total_payable_amount
             print(f"Balance was filled with {total_payable_amount} GEL. New balance: {accounts[account_number]['Balance']} GEL")
-        
-        # Initialize 'Loans' key if it doesn't exist
+
         if 'Loans' not in accounts[account_number]:
             accounts[account_number]['Loans'] = []
 
-        # Add loan information to the account
+
         accounts[account_number]['Loans'].append({
             'loan_amount': loan_amount,
             'loan_interest_rate': loan_interest_rate,
@@ -34,7 +33,6 @@ def balance(accounts):
 
         try:
             if add_funds(account_number, loan_amount, loan_interest_rate, total_payable_amount, decision, accounts):
-                # Update database after adding the loan
                 with open('database.py', 'w') as f:
                     f.write('database = ' + str(database))
                 return True
