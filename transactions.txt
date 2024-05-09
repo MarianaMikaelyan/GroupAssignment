@@ -1,0 +1,6 @@
+ttt, ggg, TB4379, 10.0, Sent
+mmm, kkk, TB4085, 10.0, Received
+ttt, ggg, TB4379, 5.0, Sent
+ttt, ggg, TB4379, 5.0, Received
+keti, ketiketi, TB2710, 20.0, Sent
+mari, marimari, TB6444, 20.0, Received
