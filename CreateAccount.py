@@ -1,5 +1,5 @@
 
-
+import csv
 import random
 import string
 from database import database
@@ -10,6 +10,9 @@ def validate_account_number():
     account_number = prefix + digits
     return account_number
 
+def generate_user_id():
+    return ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(6))
+
 def register_user():
     first_name = input("Enter your first name: ")
     last_name = input("Enter your last name: ")
@@ -17,7 +20,13 @@ def register_user():
 
     if initial_balance <= 100:
         new_account_number = validate_account_number()
+        user_id = generate_user_id()
         database[new_account_number] = {'First Name': first_name, 'Last Name': last_name, 'Balance': initial_balance}
+
+        with open('users.csv', mode='a', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow([user_id, first_name, last_name, new_account_number, initial_balance])
+            
         print("You have registered successfully.")
         print("Your new account number is:", new_account_number)
         
