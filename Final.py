@@ -6,6 +6,7 @@ from AccountDetails import users_details
 from loancalculator import balance
 from AccountHistory import *
 
+
 def final():
     while True:
         try:
@@ -38,11 +39,11 @@ def final():
                     print("Transaction history for account:", account_number)
                     for transaction_detail in history[account_number]:
                         print("-", transaction_detail)
-            
             elif choice == 7:
+                print("Exiting...")
                 break 
             else:
-                print("Invalid choice. Please enter 1, 2, 4, or 5.")
+                print("Invalid choice. Please enter a number between 1 and 7.")
         except ValueError:
             print("Invalid input. Please enter a number.")
 
