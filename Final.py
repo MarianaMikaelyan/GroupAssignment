@@ -1,6 +1,6 @@
 from database import database
-from CreateAccount import register_user
-from Balance import balance1
+from CreateAccount import UserRegistration
+from Balance import Balance
 from MoneyTransfer import transaction
 from AccountDetails import users_details
 from loancalculator import balance
@@ -20,9 +20,9 @@ def final():
             choice = int(input("Enter your choice: "))
 
             if choice == 1:
-                register_user()
+                UserRegistration().register_user()
             elif choice == 2:
-                balance1()
+                Balance().top_up_balance()
             elif choice == 3:
                 sender_account = input("Enter Your Account Number: ")
                 receiver_account = input("Enter The Account Number Of The Receiver: ")
