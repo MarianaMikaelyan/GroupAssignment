@@ -3,7 +3,7 @@ from CreateAccount import UserRegistration
 from Balance import Balance
 from MoneyTransfer import transaction
 from AccountDetails import users_details
-from loancalculator import balance
+from LoanCalculator import balance
 from AccountHistory import *
 
 
